@@ -13,7 +13,8 @@
     width: 60% ;
     margin: 20px auto;
     padding: 20px 20px;
-    background-image: url(sp.jpg);
+    background: rgb(251, 250, 250);
+
 
 
 
@@ -60,6 +61,7 @@ select{
     border: none;
     padding-left: 0.5rem 0.5rem;
     box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem;
+
 }
 textarea{
     width: 100%;
@@ -72,22 +74,27 @@ label{
     font-weight: bold;
 }
 button{
-    width: 100%;
+    width: 40%;
     color: white;
+    background-color: rgb(12, 151, 58);
     cursor: pointer;
     border: none;
     justify-content: center;
     align-items: center;
     box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem;
+    text-align: center;
 }
-.btn btn-danger{
-    width: 100%;
-    color: white;
+.btn-danger{
+    width: 40%;
+    color: whitesmoke;
+    background-color: rgb(148, 14, 14);
     cursor: pointer;
     border: none;
     justify-content: center;
     align-items: center;
     box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem;
+    text-align: center;
+
 }
 .ErrorMessage{
       color: #f00;
