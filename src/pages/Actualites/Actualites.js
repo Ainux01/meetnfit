@@ -9,7 +9,7 @@ import "./index.css";
 function Actualites() {
   const [index, setIndex] = useState(0);
   const [actualites, setActualites] = useState([]);
-  const url = "http://localhost:8080/activity/getAll";
+  const url = "http://localhost:8080/evenement";
   const getImage = (titre) => {
     if (titre === "football") {
       return football;
@@ -41,7 +41,7 @@ function Actualites() {
 
   const getActualites = async () => {
     try {
-      const response = await fetch("http://localhost:8080/activity/getAll");
+      const response = await fetch("http://localhost:8080/evenement");
       const data = await response.json();
       setActualites(data);
     } catch (error) {
@@ -75,15 +75,39 @@ function Actualites() {
           ) {
             position = "lastSlide";
           }
-          const { id, nombrePlaces, titre, latitude, longitude, description } =
-            act;
+          const {
+            id,
+            nbrePersonne,
+            titre,
+            adresse,
+            date,
+            horaire,
+            niveau,
+            description,
+          } = act;
           return (
             <article key={id} className={position}>
               <img src={getImage(titre)} alt={titre} className="img" />
               <h4>{titre}</h4>
-              <p className="title">Nombre de Places : {nombrePlaces}</p>
-              <p className="text">{description}</p>
-              <FaQuoteRight className="icon" />
+              <br />
+              <p className="title">
+                Nombre de Places : {nbrePersonne}
+                <br />
+                <br />
+                Date : {date}
+                <br />
+                <br />
+                Horaire : {horaire.slice(0, 2)}h {horaire.slice(3)} min
+                <br />
+                <br />
+                {adresse}
+                <br />
+                <br />
+                {description}
+                <br />
+                <br />
+                <FaQuoteRight className="icon" />
+              </p>
             </article>
           );
         })}
