@@ -1,0 +1,15 @@
+.dark.str-chat .str-chat__message-simple-text-inner{
+    background: hsla(0,0%,100%,.05);
+    color: #fff;
+}
+.dark.str-chat .str-chat__message-simple--me .str-chat__message-simple-text-inner {
+    background: rgba(0,0,0,.2);
+  }
+
+  .str-chat__li .quoted-message.mine .quoted-message-inner {
+    background: hsla(0,0%,100%,.05);
+    color: #fff;
+  }
+  .dark.str-chat .str-chat__message-actions-box button {
+    color: #000;
+  }
